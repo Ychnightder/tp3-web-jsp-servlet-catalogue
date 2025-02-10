@@ -23,4 +23,10 @@ public class Catalogue {
     public Produit getProd(int id){
         return produitHashMap.get(id);
     }
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(produitHashMap.keySet().toString());
+        return sb.toString();
+    }
 }
