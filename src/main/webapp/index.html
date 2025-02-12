@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catalogue - Produit</title>
+
+    <style>
+        input{
+            width: 75%;
+        }
+        body{
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+            padding: 10px;
+            background: #202b38;
+            color: #fff;
+            font-family: monospace;
+        }
+        .wrapper{
+            display: flex;
+            flex-direction: row;
+            height: auto;
+            justify-content: center;
+        }
+        .catalogueAddProd , .catalogeChercherProd{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="catalogueAddProd">
+        <form action="catalogue" method="post">
+            <h1>Ajouter un produit :</h1>
+            <label for="nomProd">Nom du produit :</label>
+            <input id="nomProd" name="nomProd" type="text">
+            <label for="prixProd" >Prix du produit :</label>
+            <input id="prixProd" name="prixProd" type="text">
+            <button type="submit">Enregister</button>
+        </form>
+    </div>
+    <div class="catalogeChercherProd">
+        <form action="catalogue/nom" method="get">
+            <h1>Chercher un produit :</h1>
+            <label for="nomProdChercher">Nom du produit :</label>
+            <input id="nomProdChercher" name="nomProdChercher" type="text">
+            <button type="submit">Chercher</button>
+        </form>
+    </div>
+    <div class="catalogeChercherProd">
+        <form action="catalogue/prixMax" method="get">
+            <h1>Chercher un produit :</h1>
+            <label for="prixProdMax">Prix max :</label>
+            <input id="prixProdMax" name="prixProdMax" type="text">
+            <button type="submit">Chercher</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

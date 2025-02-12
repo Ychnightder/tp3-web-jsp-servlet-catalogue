@@ -1,12 +1,14 @@
 package tp.tp3webjspservletcatalogue.catalogue;
 
 public class Produit {
+    private static int count = 1;
     private int idProd;
     private  double prixProd;
     private  String nomProd;
 
-    public Produit(int idProd, double prixProd, String nomProd) {
-        this.idProd = idProd;
+    public Produit(String nomProd, double prixProd) {
+        this.idProd = count;
+        count++;
         this.prixProd = prixProd;
         this.nomProd = nomProd;
     }
@@ -27,5 +29,13 @@ public class Produit {
     }
     public void setNomProd(String nomProd) {
         this.nomProd = nomProd;
+    }
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("- ID: ").append(idProd)
+        .append("\n- Nom: ").append(nomProd)
+                .append("\n- Prix: ").append(prixProd).append("€");
+
+        return sb.toString();
     }
 }
